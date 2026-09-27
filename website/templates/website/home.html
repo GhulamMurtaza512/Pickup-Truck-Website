@@ -1,0 +1,332 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}
+Pickup Truck & Delivery Services Dubai
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>
+            Pickup Truck & Delivery Services in Dubai
+        </h1>
+
+        <p>
+            Fast, reliable and affordable pickup truck,
+            delivery and shifting services in Dubai.
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <!-- Call Now -->
+            <a
+                href="tel:+971588462189"
+                class="btn btn-primary btn-lg"
+            >
+                📞 Call Now
+            </a>
+
+
+            <!-- WhatsApp -->
+            <a
+                href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20a%20pickup%20truck%20service%20in%20Dubai."
+                class="btn btn-success btn-lg"
+                target="_blank"
+            >
+                💬 WhatsApp
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services py-5" id="services">
+
+    <div class="container">
+
+
+        <!-- Heading -->
+        <div class="text-center mb-5">
+
+            <h2>
+                Our Services
+            </h2>
+
+            <p>
+                Reliable truck, delivery and labour services
+                for your moving and transportation needs.
+            </p>
+
+        </div>
+
+
+
+        <div class="row g-4">
+
+    {% for service in services %}
+
+        <div class="col-md-4">
+
+            <div class="service-card">
+
+                <img
+                    src="{{ service.image.url }}"
+                    alt="{{ service.title }}"
+                    style="width: 100%; height: 250px; object-fit: cover;"
+                >
+
+                <h3>
+                    {{ service.title }}
+                </h3>
+
+                <p>
+                    {{ service.description }}
+                </p>
+
+            </div>
+
+        </div>
+
+    {% empty %}
+
+        <div class="col-12 text-center">
+
+            <p>
+                No services available at the moment.
+            </p>
+
+        </div>
+
+    {% endfor %}
+
+</div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="cta py-5">
+
+    <div class="container text-center">
+
+        <h2>
+            Need a Pickup Truck or Labour?
+        </h2>
+
+        <p>
+            Call us now and tell us what you need.
+        </p>
+
+
+        <a
+            href="tel:+971588462189"
+            class="btn btn-light btn-lg"
+        >
+            📞 Call Now
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     WHY US
+===================================================== -->
+
+<section class="py-5">
+
+    <div class="container">
+
+
+        <div class="text-center mb-5">
+
+            <h2>
+                Why Choose Us?
+            </h2>
+
+        </div>
+
+
+
+        <div class="row text-center">
+
+
+            <!-- Quick Response -->
+            <div class="col-md-3">
+
+                <h4>
+                    ⚡ Quick Response
+                </h4>
+
+                <p>
+                    Get connected quickly.
+                </p>
+
+            </div>
+
+
+
+            <!-- Pickup Trucks -->
+            <div class="col-md-3">
+
+                <h4>
+                    🚚 Pickup Trucks
+                </h4>
+
+                <p>
+                    Different truck options.
+                </p>
+
+            </div>
+
+
+
+            <!-- Labour -->
+            <div class="col-md-3">
+
+                <h4>
+                    👷 Labour
+                </h4>
+
+                <p>
+                    Loading and unloading help.
+                </p>
+
+            </div>
+
+
+
+            <!-- Dubai -->
+            <div class="col-md-3">
+
+                <h4>
+                    📍 Dubai
+                </h4>
+
+                <p>
+                    Serving Dubai and nearby areas.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     FAQ
+===================================================== -->
+
+<section class="faq-section">
+
+    <h2>
+        Frequently Asked Questions
+    </h2>
+
+
+    <div class="faq">
+
+
+        <!-- FAQ 1 -->
+        <details>
+
+            <summary>
+                What areas do you cover?
+            </summary>
+
+            <p>
+                We provide pickup truck and delivery services
+                across Dubai and nearby areas.
+            </p>
+
+        </details>
+
+
+
+        <!-- FAQ 2 -->
+        <details>
+
+            <summary>
+                Do you provide loading and unloading labour?
+            </summary>
+
+            <p>
+                Yes, we provide loading and unloading labour
+                according to your requirements.
+            </p>
+
+        </details>
+
+
+
+        <!-- FAQ 3 -->
+        <details>
+
+            <summary>
+                Can I book a pickup truck for house shifting?
+            </summary>
+
+            <p>
+                Yes, our pickup trucks can be used for house
+                shifting and furniture transportation.
+            </p>
+
+        </details>
+
+
+
+        <!-- FAQ 4 -->
+        <details>
+
+            <summary>
+                How can I contact you?
+            </summary>
+
+            <p>
+                You can contact us directly by phone or WhatsApp.
+            </p>
+
+        </details>
+
+
+    </div>
+
+</section>
+
+
+{% endblock %}
