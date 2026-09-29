@@ -1,0 +1,229 @@
+{% extends 'website/base.html' %}
+
+{% block title %}
+My Dashboard | Dubai Truck Services
+{% endblock %}
+
+
+{% block content %}
+
+<section class="py-5" style="padding-top: 120px !important;">
+
+    <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+
+            <div>
+
+                <h2>
+                    My Dashboard
+                </h2>
+
+                <p class="text-muted mb-0">
+
+                    Welcome,
+                    {{ request.user.first_name }}
+
+                </p>
+
+            </div>
+
+
+            <a
+                href="{% url 'logout' %}"
+                class="btn btn-outline-danger"
+            >
+                Logout
+            </a>
+
+        </div>
+
+
+        <!-- Customer Information -->
+
+        <div class="card shadow-sm border-0 mb-4">
+
+            <div class="card-body">
+
+                <h5>
+                    My Profile
+                </h5>
+
+                <p class="mb-1">
+                    <strong>Name:</strong>
+                    {{ request.user.get_full_name }}
+                </p>
+
+                <p class="mb-1">
+                    <strong>Email:</strong>
+                    {{ request.user.email }}
+                </p>
+
+                <p class="mb-0">
+                    <strong>Phone:</strong>
+                    {{ customer.phone }}
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Service History -->
+
+        <div class="card shadow-sm border-0">
+
+            <div class="card-body">
+
+                <h5 class="mb-4">
+                    My Service History
+                </h5>
+
+
+                {% if service_requests %}
+
+                    <div class="table-responsive">
+
+                        <table class="table table-hover align-middle">
+
+                            <thead>
+
+                                <tr>
+
+                                    <th>
+                                        Service
+                                    </th>
+
+                                    <th>
+                                        Pickup
+                                    </th>
+
+                                    <th>
+                                        Drop
+                                    </th>
+
+                                    <th>
+                                        Date
+                                    </th>
+
+                                    <th>
+                                        Amount
+                                    </th>
+
+                                    <th>
+                                        Status
+                                    </th>
+
+                                </tr>
+
+                            </thead>
+
+
+                            <tbody>
+
+                                {% for request_item in service_requests %}
+
+                                    <tr>
+
+                                        <td>
+                                            {% if request_item.service %}
+                                                {{ request_item.service.title }}
+                                            {% else %}
+                                                -
+                                            {% endif %}
+                                        </td>
+
+                                        <td>
+                                            {{ request_item.pickup_location }}
+                                        </td>
+
+                                        <td>
+                                            {{ request_item.drop_location|default:"-" }}
+                                        </td>
+
+                                        <td>
+                                            {{ request_item.service_date|default:"-" }}
+                                        </td>
+
+                                        <td>
+                                            {% if request_item.amount %}
+                                                AED {{ request_item.amount }}
+                                            {% else %}
+                                                -
+                                            {% endif %}
+                                        </td>
+
+                                        <td>
+
+                                            {% if request_item.status == "pending" %}
+
+                                                <span class="badge bg-warning text-dark">
+                                                    Pending
+                                                </span>
+
+                                            {% elif request_item.status == "confirmed" %}
+
+                                                <span class="badge bg-primary">
+                                                    Confirmed
+                                                </span>
+
+                                            {% elif request_item.status == "in_progress" %}
+
+                                                <span class="badge bg-info">
+                                                    In Progress
+                                                </span>
+
+                                            {% elif request_item.status == "completed" %}
+
+                                                <span class="badge bg-success">
+                                                    Completed
+                                                </span>
+
+                                            {% elif request_item.status == "cancelled" %}
+
+                                                <span class="badge bg-danger">
+                                                    Cancelled
+                                                </span>
+
+                                            {% endif %}
+
+                                        </td>
+
+                                    </tr>
+
+                                {% endfor %}
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                {% else %}
+
+                    <div class="text-center py-4">
+
+                        <p class="text-muted">
+                            You don't have any service history yet.
+                        </p>
+
+                        <a
+                            href="/#services"
+                            class="btn btn-primary"
+                        >
+                            View Services
+                        </a>
+
+                    </div>
+
+                {% endif %}
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}
