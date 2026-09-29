@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-fo7u)7p4=%24+1!09v8kduurbyr8nenl8q5&9jnm$n39odov8=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+        'pickup-truck-website.onrender.com',
+]
 
 
 # Application definition
