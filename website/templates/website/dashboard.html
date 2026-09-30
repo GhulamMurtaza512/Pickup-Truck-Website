@@ -4,226 +4,1119 @@
 My Dashboard | Dubai Truck Services
 {% endblock %}
 
-
 {% block content %}
 
-<section class="py-5" style="padding-top: 120px !important;">
+<section class="dashboard-section">
 
+    ```
     <div class="container">
 
-        <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <!-- Dashboard Header -->
+
+        <div class="dashboard-header">
 
             <div>
 
-                <h2>
+                <h2 class="dashboard-title">
                     My Dashboard
                 </h2>
 
-                <p class="text-muted mb-0">
-
-                    Welcome,
-                    {{ request.user.first_name }}
-
+                <p class="dashboard-welcome">
+                    Welcome back,
+                    <strong>{{ request.user.first_name }}</strong>
                 </p>
 
             </div>
 
 
-            <a
-                href="{% url 'logout' %}"
-                class="btn btn-outline-danger"
-            >
+            <a href="{% url 'logout' %}" class="btn btn-outline-danger logout-btn">
+                <i class="fa-solid fa-right-from-bracket"></i>
                 Logout
             </a>
 
         </div>
 
 
-        <!-- Customer Information -->
 
-        <div class="card shadow-sm border-0 mb-4">
+        <!-- Summary Cards -->
 
-            <div class="card-body">
+        <div class="row g-4 mb-4">
 
-                <h5>
-                    My Profile
-                </h5>
+            <!-- Total -->
 
-                <p class="mb-1">
-                    <strong>Name:</strong>
-                    {{ request.user.get_full_name }}
-                </p>
+            <div class="col-md-3">
 
-                <p class="mb-1">
-                    <strong>Email:</strong>
-                    {{ request.user.email }}
-                </p>
+                <div class="dashboard-stat-card">
 
-                <p class="mb-0">
-                    <strong>Phone:</strong>
-                    {{ customer.phone }}
-                </p>
+                    <div class="stat-icon total-icon">
+                        <i class="fa-solid fa-list-check"></i>
+                    </div>
+
+                    <div>
+
+                        <p class="stat-label">
+                            Total Services
+                        </p>
+
+                        <h3>
+                            {{ service_requests|length }}
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Pending -->
+
+            <div class="col-md-3">
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon pending-icon">
+                        <i class="fa-solid fa-clock"></i>
+                    </div>
+
+                    <div>
+
+                        <p class="stat-label">
+                            Pending
+                        </p>
+
+                        <h3>
+
+                            {% with count=0 %}
+
+                            {% for item in service_requests %}
+
+                            {% if item.status == "pending" %}
+                            {{ forloop.counter }}
+                            {% endif %}
+
+                            {% endfor %}
+
+                            {% endwith %}
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Completed -->
+
+            <div class="col-md-3">
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon completed-icon">
+                        <i class="fa-solid fa-circle-check"></i>
+                    </div>
+
+                    <div>
+
+                        <p class="stat-label">
+                            Completed
+                        </p>
+
+                        <h3>
+
+                            {% for item in service_requests %}
+
+                            {% if item.status == "completed" %}
+                            {{ forloop.counter }}
+                            {% endif %}
+
+                            {% endfor %}
+
+                        </h3>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Cancelled -->
+
+            <div class="col-md-3">
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon cancelled-icon">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                    </div>
+
+                    <div>
+
+                        <p class="stat-label">
+                            Cancelled
+                        </p>
+
+                        <h3>
+
+                            {% for item in service_requests %}
+
+                            {% if item.status == "cancelled" %}
+                            {{ forloop.counter }}
+                            {% endif %}
+
+                            {% endfor %}
+
+                        </h3>
+
+                    </div>
+
+                </div>
 
             </div>
 
         </div>
+
+
+
+        <!-- Profile -->
+
+        <div class="dashboard-card mb-4">
+
+            <div class="dashboard-card-header">
+
+                <div>
+
+                    <h5>
+                        <i class="fa-solid fa-user"></i>
+                        My Profile
+                    </h5>
+
+                    <p>
+                        Your account information
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="profile-details">
+
+                <div class="profile-item">
+
+                    <span>
+                        Full Name
+                    </span>
+
+                    <strong>
+                        {{ request.user.get_full_name }}
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Email
+                    </span>
+
+                    <strong>
+                        {{ request.user.email }}
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Phone
+                    </span>
+
+                    <strong>
+                        {% if customer.phone %}
+                        {{ customer.phone }}
+                        {% else %}
+                        Not added
+                        {% endif %}
+                    </strong>
+
+                </div>
+
+
+                <div class="profile-item">
+
+                    <span>
+                        Account
+                    </span>
+
+                    <strong class="account-active">
+                        <i class="fa-solid fa-circle"></i>
+                        Active
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
 
 
         <!-- Service History -->
 
-        <div class="card shadow-sm border-0">
+        <div class="dashboard-card">
 
-            <div class="card-body">
+            <div class="dashboard-card-header service-header">
 
-                <h5 class="mb-4">
-                    My Service History
-                </h5>
+                <div>
 
+                    <h5>
+                        <i class="fa-solid fa-truck"></i>
+                        My Service History
+                    </h5>
 
-                {% if service_requests %}
+                    <p>
+                        Your previous pickup and delivery services
+                    </p>
 
-                    <div class="table-responsive">
-
-                        <table class="table table-hover align-middle">
-
-                            <thead>
-
-                                <tr>
-
-                                    <th>
-                                        Service
-                                    </th>
-
-                                    <th>
-                                        Pickup
-                                    </th>
-
-                                    <th>
-                                        Drop
-                                    </th>
-
-                                    <th>
-                                        Date
-                                    </th>
-
-                                    <th>
-                                        Amount
-                                    </th>
-
-                                    <th>
-                                        Status
-                                    </th>
-
-                                </tr>
-
-                            </thead>
+                </div>
 
 
-                            <tbody>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newServiceModal">
+                    <i class="fa-solid fa-plus"></i>
+                    New Service
+                </button>
+            </div>
 
-                                {% for request_item in service_requests %}
 
-                                    <tr>
 
-                                        <td>
-                                            {% if request_item.service %}
-                                                {{ request_item.service.title }}
-                                            {% else %}
-                                                -
-                                            {% endif %}
-                                        </td>
+            {% if service_requests %}
 
-                                        <td>
-                                            {{ request_item.pickup_location }}
-                                        </td>
+            <div class="table-responsive">
 
-                                        <td>
-                                            {{ request_item.drop_location|default:"-" }}
-                                        </td>
+                <table class="table dashboard-table">
 
-                                        <td>
-                                            {{ request_item.service_date|default:"-" }}
-                                        </td>
+                    <thead>
 
-                                        <td>
-                                            {% if request_item.amount %}
-                                                AED {{ request_item.amount }}
-                                            {% else %}
-                                                -
-                                            {% endif %}
-                                        </td>
+                        <tr>
 
-                                        <td>
+                            <th>
+                                Service
+                            </th>
 
-                                            {% if request_item.status == "pending" %}
+                            <th>
+                                Pickup
+                            </th>
 
-                                                <span class="badge bg-warning text-dark">
-                                                    Pending
-                                                </span>
+                            <th>
+                                Drop
+                            </th>
 
-                                            {% elif request_item.status == "confirmed" %}
+                            <th>
+                                Date
+                            </th>
 
-                                                <span class="badge bg-primary">
-                                                    Confirmed
-                                                </span>
+                            <th>
+                                Amount
+                            </th>
 
-                                            {% elif request_item.status == "in_progress" %}
+                            <th>
+                                Status
+                            </th>
 
-                                                <span class="badge bg-info">
-                                                    In Progress
-                                                </span>
+                        </tr>
 
-                                            {% elif request_item.status == "completed" %}
+                    </thead>
 
-                                                <span class="badge bg-success">
-                                                    Completed
-                                                </span>
 
-                                            {% elif request_item.status == "cancelled" %}
+                    <tbody>
 
-                                                <span class="badge bg-danger">
-                                                    Cancelled
-                                                </span>
+                        {% for request_item in service_requests %}
 
-                                            {% endif %}
+                        <tr>
 
-                                        </td>
+                            <td>
 
-                                    </tr>
+                                <strong>
 
-                                {% endfor %}
+                                    {% if request_item.service %}
 
-                            </tbody>
+                                    {{ request_item.service.title }}
 
-                        </table>
+                                    {% else %}
 
-                    </div>
+                                    Service
 
-                {% else %}
+                                    {% endif %}
 
-                    <div class="text-center py-4">
+                                </strong>
 
-                        <p class="text-muted">
-                            You don't have any service history yet.
-                        </p>
+                            </td>
 
-                        <a
-                            href="/#services"
-                            class="btn btn-primary"
-                        >
-                            View Services
-                        </a>
 
-                    </div>
+                            <td>
+                                {{ request_item.pickup_location }}
+                            </td>
 
-                {% endif %}
+
+                            <td>
+                                {{ request_item.drop_location|default:"-" }}
+                            </td>
+
+
+                            <td>
+                                {{ request_item.service_date|default:"-" }}
+                            </td>
+
+
+                            <td>
+
+                                {% if request_item.amount %}
+
+                                <strong>
+                                    AED {{ request_item.amount }}
+                                </strong>
+
+                                {% else %}
+
+                                -
+
+                                {% endif %}
+
+                            </td>
+
+
+                            <td>
+
+                                {% if request_item.status == "pending" %}
+
+                                <span class="status-badge status-pending">
+                                    Pending
+                                </span>
+
+                                {% elif request_item.status == "confirmed" %}
+
+                                <span class="status-badge status-confirmed">
+                                    Confirmed
+                                </span>
+
+                                {% elif request_item.status == "in_progress" %}
+
+                                <span class="status-badge status-progress">
+                                    In Progress
+                                </span>
+
+                                {% elif request_item.status == "completed" %}
+
+                                <span class="status-badge status-completed">
+                                    Completed
+                                </span>
+
+                                {% elif request_item.status == "cancelled" %}
+
+                                <span class="status-badge status-cancelled">
+                                    Cancelled
+                                </span>
+
+                                {% endif %}
+
+                            </td>
+
+                        </tr>
+
+                        {% endfor %}
+
+                    </tbody>
+
+                </table>
 
             </div>
 
+
+            {% else %}
+
+
+            <!-- Empty State -->
+
+            <div class="empty-dashboard">
+
+                <div class="empty-icon">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                </div>
+
+                <h5>
+                    No Service History Yet
+                </h5>
+
+                <p>
+                    You haven't requested any services yet.
+                    Choose a service and contact us to get started.
+                </p>
+
+
+                <div class="empty-actions">
+
+                    <a href="/#services" class="btn btn-primary">
+                        <i class="fa-solid fa-truck"></i>
+                        View Services
+                    </a>
+
+
+                    <a href="tel:+971588462189" class="btn btn-outline-primary">
+                        <i class="fa-solid fa-phone"></i>
+                        Call Us
+                    </a>
+
+
+                    <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20your%20pickup%20truck%20service."
+                        target="_blank" class="btn btn-outline-success">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            {% endif %}
+
         </div>
 
+
     </div>
+    ```
 
 </section>
 
+{% endblock %}
+
+{% block extra_css %}
+
+<style>
+    .dashboard-section {
+
+        padding-top: 120px;
+
+        padding-bottom: 70px;
+
+        background: #f6f8fb;
+    }
+
+
+    .dashboard-header {
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+
+        margin-bottom: 30px;
+    }
+
+
+    .dashboard-title {
+
+        font-size: 32px;
+
+        font-weight: 700;
+
+        margin-bottom: 5px;
+    }
+
+
+    .dashboard-welcome {
+
+        color: #777;
+
+        margin-bottom: 0;
+    }
+
+
+    .logout-btn {
+
+        padding: 9px 18px;
+
+        border-radius: 8px;
+    }
+
+
+
+    /* Statistics */
+
+    .dashboard-stat-card {
+
+        background: #ffffff;
+
+        border-radius: 12px;
+
+        padding: 22px;
+
+        display: flex;
+
+        align-items: center;
+
+        gap: 16px;
+
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+
+        height: 100%;
+
+        transition: 0.2s ease;
+    }
+
+
+    .dashboard-stat-card:hover {
+
+        transform: translateY(-3px);
+
+    }
+
+
+    .stat-icon {
+
+        width: 50px;
+
+        height: 50px;
+
+        border-radius: 10px;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 21px;
+    }
+
+
+    .total-icon {
+
+        background: #e8f0ff;
+
+        color: #0d6efd;
+    }
+
+
+    .pending-icon {
+
+        background: #fff3cd;
+
+        color: #997404;
+    }
+
+
+    .completed-icon {
+
+        background: #d1e7dd;
+
+        color: #146c43;
+    }
+
+
+    .cancelled-icon {
+
+        background: #f8d7da;
+
+        color: #b02a37;
+    }
+
+
+    .stat-label {
+
+        color: #777;
+
+        font-size: 14px;
+
+        margin-bottom: 3px;
+    }
+
+
+    .dashboard-stat-card h3 {
+
+        margin: 0;
+
+        font-size: 25px;
+
+        font-weight: 700;
+    }
+
+
+
+    /* Cards */
+
+    .dashboard-card {
+
+        background: #ffffff;
+
+        border-radius: 12px;
+
+        box-shadow: 0 4px 18px rgba(0, 0, 0, 0.06);
+
+        overflow: hidden;
+    }
+
+
+    .dashboard-card-header {
+
+        padding: 22px 25px;
+
+        border-bottom: 1px solid #eeeeee;
+
+        display: flex;
+
+        justify-content: space-between;
+
+        align-items: center;
+    }
+
+
+    .dashboard-card-header h5 {
+
+        margin: 0;
+
+        font-weight: 700;
+    }
+
+
+    .dashboard-card-header h5 i {
+
+        margin-right: 8px;
+
+        color: #0d6efd;
+    }
+
+
+    .dashboard-card-header p {
+
+        color: #888;
+
+        margin: 5px 0 0;
+
+        font-size: 14px;
+    }
+
+
+
+    /* Profile */
+
+    .profile-details {
+
+        display: grid;
+
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+
+    .profile-item {
+
+        padding: 22px 25px;
+
+        border-right: 1px solid #eeeeee;
+    }
+
+
+    .profile-item:last-child {
+
+        border-right: none;
+    }
+
+
+    .profile-item span {
+
+        display: block;
+
+        color: #888;
+
+        font-size: 13px;
+
+        margin-bottom: 7px;
+    }
+
+
+    .profile-item strong {
+
+        font-size: 15px;
+
+        word-break: break-word;
+    }
+
+
+    .account-active {
+
+        color: #198754;
+    }
+
+
+    .account-active i {
+
+        font-size: 8px;
+
+        margin-right: 5px;
+    }
+
+
+
+    /* Table */
+
+    .dashboard-table {
+
+        margin: 0;
+    }
+
+
+    .dashboard-table th {
+
+        background: #f8f9fa;
+
+        font-size: 13px;
+
+        font-weight: 600;
+
+        color: #555;
+
+        padding: 15px 20px;
+
+        white-space: nowrap;
+    }
+
+
+    .dashboard-table td {
+
+        padding: 17px 20px;
+
+        vertical-align: middle;
+
+        font-size: 14px;
+    }
+
+
+    .dashboard-table tbody tr:last-child td {
+
+        border-bottom: none;
+    }
+
+
+
+    /* Status */
+
+    .status-badge {
+
+        display: inline-block;
+
+        padding: 6px 11px;
+
+        border-radius: 20px;
+
+        font-size: 12px;
+
+        font-weight: 600;
+
+        white-space: nowrap;
+    }
+
+
+    .status-pending {
+
+        background: #fff3cd;
+
+        color: #856404;
+    }
+
+
+    .status-confirmed {
+
+        background: #cfe2ff;
+
+        color: #084298;
+    }
+
+
+    .status-progress {
+
+        background: #cff4fc;
+
+        color: #055160;
+    }
+
+
+    .status-completed {
+
+        background: #d1e7dd;
+
+        color: #0f5132;
+    }
+
+
+    .status-cancelled {
+
+        background: #f8d7da;
+
+        color: #842029;
+    }
+
+
+
+    /* Empty State */
+
+    .empty-dashboard {
+
+        text-align: center;
+
+        padding: 55px 25px;
+    }
+
+
+    .empty-icon {
+
+        width: 70px;
+
+        height: 70px;
+
+        margin: 0 auto 18px;
+
+        border-radius: 50%;
+
+        background: #e8f0ff;
+
+        color: #0d6efd;
+
+        display: flex;
+
+        align-items: center;
+
+        justify-content: center;
+
+        font-size: 28px;
+    }
+
+
+    .empty-dashboard h5 {
+
+        font-weight: 700;
+
+        margin-bottom: 8px;
+    }
+
+
+    .empty-dashboard p {
+
+        color: #777;
+
+        max-width: 500px;
+
+        margin: 0 auto 22px;
+    }
+
+
+    .empty-actions {
+
+        display: flex;
+
+        justify-content: center;
+
+        gap: 10px;
+
+        flex-wrap: wrap;
+    }
+
+
+
+    /* Mobile */
+
+    @media (max-width: 991px) {
+
+        .profile-details {
+
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+
+        .profile-item:nth-child(2) {
+
+            border-right: none;
+        }
+
+    }
+
+
+    @media (max-width: 768px) {
+
+        .dashboard-section {
+
+            padding-top: 100px;
+        }
+
+
+        .dashboard-header {
+
+            align-items: flex-start;
+
+            gap: 15px;
+        }
+
+
+        .dashboard-title {
+
+            font-size: 26px;
+        }
+
+
+        .dashboard-card-header {
+
+            align-items: flex-start;
+
+            gap: 15px;
+
+            flex-direction: column;
+        }
+
+
+        .profile-details {
+
+            grid-template-columns: 1fr;
+        }
+
+
+        .profile-item {
+
+            border-right: none;
+
+            border-bottom: 1px solid #eeeeee;
+        }
+
+
+        .profile-item:last-child {
+
+            border-bottom: none;
+        }
+
+    }
+</style>
+
+<!-- New Service Modal -->
+<div class="modal fade" id="newServiceModal" tabindex="-1" aria-labelledby="newServiceModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <div>
+                    <h5 class="modal-title" id="newServiceModalLabel">
+                        <i class="fa-solid fa-truck"></i>
+                        Request New Service
+                    </h5>
+                    <p class="modal-subtitle">
+                        Enter your pickup and delivery details.
+                    </p>
+                </div>
+
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <form method="POST" action="{% url 'create_service_request' %}">
+                {% csrf_token %}
+
+                <div class="modal-body">
+
+                    <div class="row g-3">
+
+                        <!-- Service -->
+                        <div class="col-md-12">
+                            <label class="form-label">
+                                Service
+                            </label>
+
+                            <select name="service" class="form-select" required>
+                                <option value="">
+                                    Select Service
+                                </option>
+
+                                {% for service in services %}
+                                <option value="{{ service.id }}">
+                                    {{ service.title }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <!-- Pickup -->
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Pickup Location
+                            </label>
+
+                            <input type="text" name="pickup_location" class="form-control"
+                                placeholder="Enter pickup location" required>
+                        </div>
+
+                        <!-- Destination -->
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Destination
+                            </label>
+
+                            <input type="text" name="drop_location" class="form-control" placeholder="Enter destination"
+                                required>
+                        </div>
+
+                        <!-- Date -->
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Service Date
+                            </label>
+
+                            <input type="date" name="service_date" class="form-control" required>
+                        </div>
+
+                        <!-- Time -->
+                        <div class="col-md-6">
+                            <label class="form-label">
+                                Preferred Time
+                            </label>
+
+                            <input type="time" name="service_time" class="form-control">
+                        </div>
+
+                        <!-- Notes -->
+                        <div class="col-12">
+                            <label class="form-label">
+                                Additional Details
+                            </label>
+
+                            <textarea name="notes" class="form-control" rows="4"
+                                placeholder="Enter any additional details..."></textarea>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Cancel
+                    </button>
+
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        Submit Request
+                    </button>
+
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</div>
 {% endblock %}

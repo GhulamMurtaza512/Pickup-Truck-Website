@@ -25,28 +25,22 @@ Pickup Truck & Delivery Services Dubai
         </h1>
 
         <p>
-            Fast, reliable and affordable pickup truck,
-            delivery and shifting services in Dubai.
+    Fast, reliable and professional pickup truck,
+    delivery, shifting and labour services across Dubai and the UAE.
         </p>
 
 
         <div class="hero-buttons">
 
             <!-- Call Now -->
-            <a
-                href="tel:+971588462189"
-                class="btn btn-primary btn-lg"
-            >
+            <a href="tel:+971588462189" class="btn btn-primary btn-lg">
                 📞 Call Now
             </a>
 
 
             <!-- WhatsApp -->
-            <a
-                href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20a%20pickup%20truck%20service%20in%20Dubai."
-                class="btn btn-success btn-lg"
-                target="_blank"
-            >
+            <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20a%20pickup%20truck%20service%20in%20Dubai."
+                class="btn btn-success btn-lg" target="_blank">
                 💬 WhatsApp
             </a>
 
@@ -71,55 +65,90 @@ Pickup Truck & Delivery Services Dubai
         <div class="text-center mb-5">
 
             <h2>
-                Our Services
+               Our Services
             </h2>
+            <p>
+                Fast, reliable pickup truck, delivery and labour services
+                across <br> <b>Dubai, Sharjah, Ajman, Abu Dhabi, Fujairah, Al Ain</b>
+                and other areas across the UAE.
+            </p>
+        </div>
+
+
+
+<div class="row g-4">
+
+    <!-- Service 1 -->
+    <div class="col-md-4">
+
+        <div class="service-card">
+
+            <img
+                src="{% static 'website/images/fast_relaible.png' %}"
+                alt="Material Service"
+                style="width: 100%; height: 250px; object-fit: cover;"
+            >
+
+            <h3>
+                Fast & Reliable Service
+            </h3>
 
             <p>
-                Reliable truck, delivery and labour services
-                for your moving and transportation needs.
+                Fast response for <b>Delivery, Shifting & Transportation</b> needs,ensuring
+    your goods are handled safely and delivered on time.
             </p>
 
         </div>
 
+    </div>
 
 
-        <div class="row g-4">
+    <!-- Service 2 -->
+    <div class="col-md-4">
 
-    {% for service in services %}
+        <div class="service-card">
 
-        <div class="col-md-4">
+            <img
+                src="{% static 'website/images/1ton.png' %}"
+                alt="Delivery Service"
+                style="width: 100%; height: 250px; object-fit: cover;"
+            >
 
-            <div class="service-card">
-
-                <img
-                    src="{{ service.image.url }}"
-                    alt="{{ service.title }}"
-                    style="width: 100%; height: 250px; object-fit: cover;"
-                >
-
-                <h3>
-                    {{ service.title }}
-                </h3>
-
-                <p>
-                    {{ service.description }}
-                </p>
-
-            </div>
-
-        </div>
-
-    {% empty %}
-
-        <div class="col-12 text-center">
+            <h3>
+                1 Ton Pickup
+            </h3>
 
             <p>
-                No services available at the moment.
+                For <b>Home & Office Shifting, Deliveries,Furniture, Boxes & Goods Transportation.</b> 
             </p>
 
         </div>
 
-    {% endfor %}
+    </div>
+
+
+    <!-- Service 3 -->
+    <div class="col-md-4">
+
+        <div class="service-card">
+
+            <img
+                src="{% static 'website/images/loading&unloading.png' %}"
+                alt="House Shifting"
+                style="width: 100%; height: 250px; object-fit: cover;"
+            >
+
+            <h3>
+                Labour Loading & Unloading
+            </h3>
+
+            <p>
+                Reliable labour available for <b>loading, unloading & Shifting assistance. </b>
+            </p>
+
+        </div>
+
+    </div>
 
 </div>
 
@@ -142,16 +171,21 @@ Pickup Truck & Delivery Services Dubai
         </h2>
 
         <p>
-            Call us now and tell us what you need.
+    Tell us what you need and we'll help you with the right
+    pickup truck, delivery or labour service.
         </p>
 
 
-        <a
-            href="tel:+971588462189"
-            class="btn btn-light btn-lg"
-        >
+        <a href="tel:+971588462189" class="btn btn-light btn-lg">
             📞 Call Now
         </a>
+
+        <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20a%20pickup%20truck%20or%20labour%20service."
+   class="btn btn-success btn-lg ms-2"
+   target="_blank">
+    <i class="fa-brands fa-whatsapp"></i>
+    WhatsApp Us
+</a>
 
     </div>
 
@@ -244,6 +278,59 @@ Pickup Truck & Delivery Services Dubai
 
     </div>
 
+    <section class="py-5 bg-light">
+
+    <div class="container text-center">
+
+        <h2 class="mb-3">
+            Areas We Serve
+        </h2>
+
+        <p class="mb-4">
+            Pickup truck, delivery, shifting and labour services
+            available across major areas of the UAE.
+        </p>
+
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+
+            <span class="badge bg-primary p-3">
+                Dubai
+            </span>
+
+            <span class="badge bg-primary p-3">
+                Sharjah
+            </span>
+
+            <span class="badge bg-primary p-3">
+                Ajman
+            </span>
+
+            <span class="badge bg-primary p-3">
+                Abu Dhabi
+            </span>
+
+            <span class="badge bg-primary p-3">
+                Fujairah
+            </span>
+
+            <span class="badge bg-primary p-3">
+                Al Ain
+            </span>
+
+            <span class="badge bg-primary p-3">
+                Ras Al Khaimah
+            </span>
+
+            <span class="badge bg-primary p-3">
+                Umm Al Quwain
+            </span>
+
+        </div>
+
+    </div>
+
+</section>
+
 </section>
 
 
@@ -270,8 +357,9 @@ Pickup Truck & Delivery Services Dubai
             </summary>
 
             <p>
-                We provide pickup truck and delivery services
-                across Dubai and nearby areas.
+    We provide pickup truck, delivery, shifting and labour
+    services across Dubai, Sharjah, Ajman, Abu Dhabi,
+    Fujairah, Al Ain and other areas across the UAE.
             </p>
 
         </details>
@@ -322,6 +410,34 @@ Pickup Truck & Delivery Services Dubai
             </p>
 
         </details>
+
+        <details>
+
+    <summary>
+        What can I transport with your 1 ton pickup?
+    </summary>
+
+    <p>
+        Our pickup truck can be used for furniture, boxes,
+        household goods, office items, building materials
+        and other suitable transportation needs.
+    </p>
+
+</details>
+
+<details>
+
+    <summary>
+        Do you provide house and office shifting services?
+    </summary>
+
+    <p>
+        Yes, we provide pickup truck and labour assistance
+        for house shifting, office shifting, furniture moving,
+        loading and unloading.
+    </p>
+
+</details>
 
 
     </div>

@@ -45,4 +45,27 @@ urlpatterns = [
         name='dashboard'
     ),
 
+    path(
+    'service-request/create/',
+    views.create_service_request,
+    name='create_service_request'
+),
+    path(
+    'driver-panel/',
+    views.driver_panel,
+    name='driver_panel'
+),
+
+    path(
+    'driver-panel/update-status/<str:delivery_id>/',
+    views.update_delivery_status,
+    name='update_delivery_status'
+),
+
+    path(
+    'driver-panel/assign-driver/<str:delivery_id>/',
+    views.assign_driver,
+    name='assign_driver'
+),
+
 ]
