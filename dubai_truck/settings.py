@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-fo7u)7p4=%24+1!09v8kduurbyr8nenl8q5&9jnm$n39odov8=
 DEBUG = True
 
 ALLOWED_HOSTS = [
-
+    '127.0.0.1',
+    'localhost',
+    'pickup-truck-website.onrender.com',
 ]
 
 
