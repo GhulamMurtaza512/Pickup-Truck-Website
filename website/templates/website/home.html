@@ -4,7 +4,9 @@
 {% block title %}
 Pickup Truck & Delivery Services Dubai
 {% endblock %}
-
+{% block meta_description %}
+Pickup truck and delivery services in Dubai for 1 ton pickup, house shifting, office shifting, furniture transportation, loading and unloading across Dubai and the UAE.
+{% endblock %}
 
 
 {% block content %}
@@ -21,7 +23,7 @@ Pickup Truck & Delivery Services Dubai
     <div class="hero-content">
 
         <h1>
-            Pickup Truck & Delivery Services in Dubai
+             Pickup Truck & Delivery Services in Dubai
         </h1>
 
         <p>
@@ -93,7 +95,7 @@ Pickup Truck & Delivery Services Dubai
                     >
 
                     <h3>
-                        Fast & Reliable Service
+                        Pickup Truck Delivery & Transportation
                     </h3>
 
                     <p>
@@ -130,7 +132,7 @@ Pickup Truck & Delivery Services Dubai
                     >
 
                     <h3>
-                        1 Ton Pickup
+                        1 Ton Pickup Truck Service in Dubai
                     </h3>
 
                     <p>
@@ -166,7 +168,7 @@ Pickup Truck & Delivery Services Dubai
                     >
 
                     <h3>
-                        Labour Loading & Unloading
+                        Loading & Unloading Labour in Dubai
                     </h3>
 
                     <p>
@@ -194,11 +196,6 @@ Pickup Truck & Delivery Services Dubai
 
 </section>
 
-
-
-<!-- =====================================================
-     CTA
-===================================================== -->
 
 <section class="cta py-5">
 
@@ -547,58 +544,4 @@ Pickup Truck & Delivery Services Dubai
     </div>
 
 </div>
-<!-- <script>
-
-    document.addEventListener('DOMContentLoaded', function () {
-
-        const serviceCards =
-            document.querySelectorAll('.service-clickable');
-
-        const selectedService =
-            document.getElementById('selectedService');
-
-        const whatsappButton =
-            document.getElementById('serviceWhatsapp');
-
-        const modalElement =
-            document.getElementById('serviceContactModal');
-
-        const serviceModal =
-            new bootstrap.Modal(modalElement);
-
-
-        serviceCards.forEach(function (card) {
-
-            card.addEventListener('click', function () {
-
-                const serviceName =
-                    card.getAttribute('data-service');
-
-
-                selectedService.textContent =
-                    serviceName;
-
-
-                const message =
-                    `Hello, I need your ${serviceName} service in Dubai.`;
-
-
-                const whatsappUrl =
-                    'https://wa.me/971588462189?text=' +
-                    encodeURIComponent(message);
-
-
-                whatsappButton.href =
-                    whatsappUrl;
-
-
-                serviceModal.show();
-
-            });
-
-        });
-
-    });
-
-</script> -->
 {% endblock %}
