@@ -60,20 +60,23 @@ Pickup Truck & Delivery Services Dubai
 
     <div class="container">
 
-
         <!-- Heading -->
         <div class="text-center mb-5">
 
             <h2>
                 Our Services
             </h2>
+
             <p>
                 Fast, reliable pickup truck, delivery and labour services
-                across <br> <b>Dubai, Sharjah, Ajman, Abu Dhabi, Fujairah, Al Ain</b>
+                across <br>
+                <b>
+                    Dubai, Sharjah, Ajman, Abu Dhabi, Fujairah, Al Ain
+                </b>
                 and other areas across the UAE.
             </p>
-        </div>
 
+        </div>
 
 
         <div class="row g-4">
@@ -81,10 +84,13 @@ Pickup Truck & Delivery Services Dubai
             <!-- Service 1 -->
             <div class="col-md-4">
 
-                <div class="service-card service-clickable" data-service="Fast & Reliable Service">
+                <div class="service-card">
 
-                    <img src="{% static 'website/images/fast_relaible.png' %}" alt="Fast & Reliable Service"
-                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <img
+                        src="{% static 'website/images/fast_relaible.png' %}"
+                        alt="Fast & Reliable Pickup Truck Service"
+                        style="width: 100%; height: 250px; object-fit: cover;"
+                    >
 
                     <h3>
                         Fast & Reliable Service
@@ -92,10 +98,20 @@ Pickup Truck & Delivery Services Dubai
 
                     <p>
                         Fast response for
-                        <b>Delivery, Shifting & Transportation</b>
+                        <b>
+                            Delivery, Shifting & Transportation
+                        </b>
                         needs, ensuring your goods are handled safely
                         and delivered on time.
                     </p>
+
+                    <a href="{% url 'pickup_delivery' %}"
+                       class="btn btn-primary mt-2">
+
+                        View Service
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
 
                 </div>
 
@@ -105,10 +121,13 @@ Pickup Truck & Delivery Services Dubai
             <!-- Service 2 -->
             <div class="col-md-4">
 
-                <div class="service-card service-clickable" data-service="1 Ton Pickup">
+                <div class="service-card">
 
-                    <img src="{% static 'website/images/1ton.png' %}" alt="1 Ton Pickup"
-                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <img
+                        src="{% static 'website/images/1ton.png' %}"
+                        alt="1 Ton Pickup Truck Service in Dubai"
+                        style="width: 100%; height: 250px; object-fit: cover;"
+                    >
 
                     <h3>
                         1 Ton Pickup
@@ -122,6 +141,14 @@ Pickup Truck & Delivery Services Dubai
                         </b>
                     </p>
 
+                    <a href="{% url 'one_ton_pickup' %}"
+                       class="btn btn-primary mt-2">
+
+                        View Service
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
+
                 </div>
 
             </div>
@@ -130,10 +157,13 @@ Pickup Truck & Delivery Services Dubai
             <!-- Service 3 -->
             <div class="col-md-4">
 
-                <div class="service-card service-clickable" data-service="Loading & Unloading Labour">
+                <div class="service-card">
 
-                    <img src="{% static 'website/images/loading&unloading.png' %}" alt="Loading & Unloading Labour"
-                        style="width: 100%; height: 250px; object-fit: cover;">
+                    <img
+                        src="{% static 'website/images/loading&unloading.png' %}"
+                        alt="Loading and Unloading Labour in Dubai"
+                        style="width: 100%; height: 250px; object-fit: cover;"
+                    >
 
                     <h3>
                         Labour Loading & Unloading
@@ -145,6 +175,14 @@ Pickup Truck & Delivery Services Dubai
                             loading, unloading & shifting assistance.
                         </b>
                     </p>
+
+                    <a href="{% url 'loading_labour' %}"
+                       class="btn btn-primary mt-2">
+
+                        View Service
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </a>
 
                 </div>
 
@@ -509,7 +547,7 @@ Pickup Truck & Delivery Services Dubai
     </div>
 
 </div>
-<script>
+<!-- <script>
 
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -562,5 +600,5 @@ Pickup Truck & Delivery Services Dubai
 
     });
 
-</script>
+</script> -->
 {% endblock %}

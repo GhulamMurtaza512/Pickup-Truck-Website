@@ -21,6 +21,33 @@ urlpatterns = [
         name='contact'
     ),
     path('services/', views.services, name='services'),
+
+ path(
+    'services/1-ton-pickup-dubai/',
+    views.one_ton_pickup,
+    name='one_ton_pickup'
+),
+
+path(
+    'services/pickup-truck-delivery-dubai/',
+    views.pickup_delivery,
+    name='pickup_delivery'
+),
+
+path(
+    'services/loading-unloading-labour-dubai/',
+    views.loading_labour,
+    name='loading_labour'
+),
+
+path('robots.txt', views.robots_txt, name='robots_txt'),
+
+path(
+    'google61ddc56d63cfcd90.html',
+    views.google_verification,
+    name='google_verification'
+),
+
     path(
         'login/',
         views.login_view,
@@ -50,22 +77,7 @@ urlpatterns = [
     views.create_service_request,
     name='create_service_request'
 ),
-    path(
-    'driver-panel/',
-    views.driver_panel,
-    name='driver_panel'
-),
 
-    path(
-    'driver-panel/update-status/<str:delivery_id>/',
-    views.update_delivery_status,
-    name='update_delivery_status'
-),
 
-    path(
-    'driver-panel/assign-driver/<str:delivery_id>/',
-    views.assign_driver,
-    name='assign_driver'
-),
 
 ]

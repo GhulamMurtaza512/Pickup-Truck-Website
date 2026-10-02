@@ -8,6 +8,7 @@ from .models import (
     CustomerProfile,
     ServiceRequest,
 )
+from django.http import HttpResponse
 
 
 # =====================================================
@@ -55,7 +56,38 @@ def contact(request):
 
 def services(request):
     return render(request, 'website/services.html')
-    
+
+
+def one_ton_pickup(request):
+    return render(
+        request,
+        'website/service_1ton.html'
+    )
+def pickup_delivery(request):
+    return render(
+        request,
+        'website/service_delivery.html'
+    )
+def loading_labour(request):
+    return render(
+        request,
+        'website/service_labour.html'
+    )
+
+
+def robots_txt(request):
+    content = """User-agent: *
+Allow: /
+
+Sitemap: https://pickup-truck-website.onrender.com/sitemap.xml
+"""
+    return HttpResponse(content, content_type="text/plain")
+
+def google_verification(request):
+    return HttpResponse(
+        "google-site-verification: google61ddc56d63cfcd90.html",
+        content_type="text/plain"
+    )
 # =====================================================
 # LOGIN
 # =====================================================
@@ -391,131 +423,3 @@ def create_service_request(request):
 
     return redirect('dashboard')
 
-# =====================================================
-# DELIVERY DETAIL / TRACKING
-# =====================================================
-
-def delivery_detail(request, delivery_id):
-
-    access_token = request.session.get(
-        'delivery_access_token'
-    )
-
-    delivery = Delivery.objects.filter(
-        delivery_id=delivery_id,
-        access_token=access_token
-    ).first()
-
-    if not delivery:
-        messages.error(
-            request,
-            'Delivery not found.'
-        )
-        return redirect('my_deliveries')
-
-    return render(
-        request,
-        'website/delivery_detail.html',
-        {
-            'delivery': delivery
-        }
-    )
-# =====================================================
-# DRIVER PANEL
-# =====================================================
-
-def driver_panel(request):
-
-    deliveries = Delivery.objects.all().order_by('-created_at')
-
-    return render(
-        request,
-        'website/driver_panel.html',
-        {
-            'deliveries': deliveries
-        }
-    )
-
-# =====================================================
-# UPDATE DELIVERY STATUS
-# =====================================================
-
-def update_delivery_status(request, delivery_id):
-
-    if request.method == 'POST':
-
-        delivery = Delivery.objects.filter(
-            delivery_id=delivery_id
-        ).first()
-
-        if not delivery:
-            messages.error(
-                request,
-                'Delivery not found.'
-            )
-            return redirect('driver_panel')
-
-        new_status = request.POST.get('status')
-
-        valid_statuses = [
-            'pending',
-            'accepted',
-            'going_to_pickup',
-            'picked_up',
-            'on_the_way',
-            'delivered',
-            'cancelled',
-        ]
-
-        if new_status not in valid_statuses:
-
-            messages.error(
-                request,
-                'Invalid delivery status.'
-            )
-
-            return redirect('driver_panel')
-
-        delivery.status = new_status
-        delivery.save()
-
-        messages.success(
-            request,
-            f'Delivery {delivery.delivery_id} status updated successfully.'
-        )
-
-    return redirect('driver_panel')
-
-# =====================================================
-# ASSIGN DRIVER
-# =====================================================
-
-def assign_driver(request, delivery_id):
-
-    if request.method == 'POST':
-
-        delivery = Delivery.objects.filter(
-            delivery_id=delivery_id
-        ).first()
-
-        if not delivery:
-            messages.error(
-                request,
-                'Delivery not found.'
-            )
-            return redirect('driver_panel')
-
-        driver_name = request.POST.get(
-            'assigned_driver',
-            ''
-        ).strip()
-
-        delivery.assigned_driver = driver_name
-        delivery.save()
-
-        messages.success(
-            request,
-            f'Driver assigned to {delivery.delivery_id}.'
-        )
-
-    return redirect('driver_panel')

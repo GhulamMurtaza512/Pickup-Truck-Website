@@ -73,128 +73,128 @@ Our Services | Pickup Truck & Delivery Services Dubai
 
             <div class="col-lg-4 col-md-6">
 
-                <div class="service-card service-clickable"
-                     data-service="Fast & Reliable Service">
+    <a href="{% url 'pickup_delivery' %}"
+       class="service-card service-card-link">
 
-                    <img
-                        src="{% static 'website/images/fast_relaible.png' %}"
-                        alt="Fast and Reliable Pickup Truck Service"
-                    >
+        <img
+            src="{% static 'website/images/fast_relaible.png' %}"
+            alt="Fast and Reliable Pickup Truck Service"
+        >
 
-                    <div class="service-card-content">
+        <div class="service-card-content">
 
-                        <div class="service-icon">
-                            <i class="fa-solid fa-truck-fast"></i>
-                        </div>
-
-                        <h3>
-                            Fast & Reliable Service
-                        </h3>
-
-                        <p>
-                            Fast response for
-                            <strong>
-                                Delivery, Shifting & Transportation
-                            </strong>
-                            needs, ensuring your goods are handled
-                            safely and delivered on time.
-                        </p>
-
-                        <span class="service-link">
-                            Contact Us
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </div>
-
+            <div class="service-icon">
+                <i class="fa-solid fa-truck-fast"></i>
             </div>
+
+            <h3>
+                Fast & Reliable Service
+            </h3>
+
+            <p>
+                Fast response for
+                <strong>
+                    Delivery, Shifting & Transportation
+                </strong>
+                needs, ensuring your goods are handled safely
+                and delivered on time.
+            </p>
+
+            <span class="service-link">
+                View Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+
+        </div>
+
+    </a>
+
+</div>
 
 
             <!-- Service 2 -->
 
             <div class="col-lg-4 col-md-6">
 
-                <div class="service-card service-clickable"
-                     data-service="1 Ton Pickup">
+    <a href="{% url 'one_ton_pickup' %}"
+       class="service-card service-card-link">
 
-                    <img
-                        src="{% static 'website/images/1ton.png' %}"
-                        alt="1 Ton Pickup Truck Service"
-                    >
+        <img
+            src="{% static 'website/images/1ton.png' %}"
+            alt="1 Ton Pickup Truck Service"
+        >
 
-                    <div class="service-card-content">
+        <div class="service-card-content">
 
-                        <div class="service-icon">
-                            <i class="fa-solid fa-truck"></i>
-                        </div>
-
-                        <h3>
-                            1 Ton Pickup
-                        </h3>
-
-                        <p>
-                            Suitable for
-                            <strong>
-                                Home & Office Shifting,
-                                Deliveries, Furniture,
-                                Boxes & Goods Transportation.
-                            </strong>
-                        </p>
-
-                        <span class="service-link">
-                            Contact Us
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </div>
-
+            <div class="service-icon">
+                <i class="fa-solid fa-truck"></i>
             </div>
+
+            <h3>
+                1 Ton Pickup
+            </h3>
+
+            <p>
+                Suitable for
+                <strong>
+                    Home & Office Shifting,
+                    Deliveries, Furniture,
+                    Boxes & Goods Transportation.
+                </strong>
+            </p>
+
+            <span class="service-link">
+                View Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+
+        </div>
+
+    </a>
+
+</div>
 
 
             <!-- Service 3 -->
 
             <div class="col-lg-4 col-md-6">
 
-                <div class="service-card service-clickable"
-                     data-service="Loading & Unloading Labour">
+    <a href="{% url 'loading_labour' %}"
+       class="service-card service-card-link">
 
-                    <img
-                        src="{% static 'website/images/loading&unloading.png' %}"
-                        alt="Loading and Unloading Labour Service"
-                    >
+        <img
+            src="{% static 'website/images/loading&unloading.png' %}"
+            alt="Loading and Unloading Labour Service"
+        >
 
-                    <div class="service-card-content">
+        <div class="service-card-content">
 
-                        <div class="service-icon">
-                            <i class="fa-solid fa-people-carry-box"></i>
-                        </div>
-
-                        <h3>
-                            Loading & Unloading Labour
-                        </h3>
-
-                        <p>
-                            Reliable labour available for
-                            <strong>
-                                Loading, Unloading & Shifting Assistance
-                            </strong>
-                            to help move your goods safely.
-                        </p>
-
-                        <span class="service-link">
-                            Contact Us
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </span>
-
-                    </div>
-
-                </div>
-
+            <div class="service-icon">
+                <i class="fa-solid fa-people-carry-box"></i>
             </div>
+
+            <h3>
+                Loading & Unloading Labour
+            </h3>
+
+            <p>
+                Reliable labour available for
+                <strong>
+                    Loading, Unloading & Shifting Assistance
+                </strong>
+                to help move your goods safely.
+            </p>
+
+            <span class="service-link">
+                View Service
+                <i class="fa-solid fa-arrow-right"></i>
+            </span>
+
+        </div>
+
+    </a>
+
+</div>
 
 
         </div>
@@ -511,7 +511,19 @@ Our Services | Pickup Truck & Delivery Services Dubai
 {% block extra_css %}
 
 <style>
+.service-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
 
+.service-card-link:hover {
+    color: inherit;
+}
+
+.service-card-link .service-link {
+    color: #0d6efd;
+}
 /* =========================================
    SERVICES HERO
 ========================================= */
@@ -868,75 +880,5 @@ Our Services | Pickup Truck & Delivery Services Dubai
 }
 
 </style>
-
-{% endblock %}
-
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
-{% block extra_js %}
-
-<script>
-
-document.addEventListener('DOMContentLoaded', function () {
-
-    const serviceCards =
-        document.querySelectorAll('.service-clickable');
-
-    const selectedService =
-        document.getElementById('selectedService');
-
-    const whatsappButton =
-        document.getElementById('serviceWhatsapp');
-
-    const modalElement =
-        document.getElementById('serviceContactModal');
-
-
-    if (!modalElement) {
-        return;
-    }
-
-
-    const serviceModal =
-        new bootstrap.Modal(modalElement);
-
-
-    serviceCards.forEach(function (card) {
-
-        card.addEventListener('click', function () {
-
-            const serviceName =
-                card.getAttribute('data-service');
-
-
-            selectedService.textContent =
-                serviceName;
-
-
-            const message =
-                `Hello, I need your ${serviceName} service in Dubai.`;
-
-
-            const whatsappUrl =
-                'https://wa.me/971588462189?text=' +
-                encodeURIComponent(message);
-
-
-            whatsappButton.href =
-                whatsappUrl;
-
-
-            serviceModal.show();
-
-        });
-
-    });
-
-});
-
-</script>
 
 {% endblock %}

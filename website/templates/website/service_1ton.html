@@ -1,0 +1,642 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}
+1 Ton Pickup Truck Services in Dubai | Pickup Truck Dubai
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-hero {
+        padding: 150px 0 90px;
+        background: linear-gradient(135deg, #f8f9fa, #eef5ff);
+    }
+
+    .service-hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+        color: #222;
+    }
+
+    .service-hero p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .service-image {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .service-section {
+        padding: 80px 0;
+    }
+
+    .feature-card {
+        background: #fff;
+        padding: 30px;
+        border-radius: 15px;
+        height: 100%;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card i {
+        font-size: 35px;
+        color: #0d6efd;
+        margin-bottom: 20px;
+    }
+
+    .feature-card h4 {
+        font-weight: 600;
+    }
+
+    .area-list span {
+        display: inline-block;
+        padding: 10px 18px;
+        margin: 6px;
+        background: #f1f5f9;
+        border-radius: 30px;
+        color: #333;
+    }
+
+    .process-number {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #0d6efd;
+        color: #fff;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .faq-item {
+        border-bottom: 1px solid #ddd;
+        padding: 20px 0;
+    }
+
+    .faq-item h5 {
+        font-weight: 600;
+    }
+
+    .cta-section {
+        background: #0d6efd;
+        color: white;
+        padding: 70px 0;
+    }
+
+    @media (max-width: 768px) {
+        .service-hero {
+            padding: 120px 0 60px;
+        }
+
+        .service-hero h1 {
+            font-size: 34px;
+        }
+
+        .service-hero p {
+            font-size: 16px;
+        }
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<section class="service-hero">
+    <div class="container">
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-primary mb-3">
+                    1 Ton Pickup Service
+                </span>
+
+                <h1>
+                    1 Ton Pickup Truck Services in Dubai
+                </h1>
+
+                <p class="mt-3">
+                    Reliable 1 ton pickup truck service in Dubai for
+                    furniture, household items, office goods, boxes
+                    and general deliveries.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="tel:+971588462189"
+                       class="btn btn-primary btn-lg me-2">
+                        <i class="fa-solid fa-phone"></i>
+                        Call Now
+                    </a>
+
+                    <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%201%20ton%20pickup%20truck%20service%20in%20Dubai."
+                       target="_blank"
+                       class="btn btn-success btn-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <img src="{% static 'website/images/1ton.png' %}"
+                     alt="1 Ton Pickup Truck Service in Dubai"
+                     class="service-image">
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ABOUT -->
+<section class="service-section">
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <h2 class="section-title">
+                    1 Ton Pickup Truck Service in Dubai
+                </h2>
+
+                <p>
+                    Our 1 ton pickup truck service is suitable for
+                    customers who need to transport goods around Dubai
+                    and nearby areas.
+                </p>
+
+                <p>
+                    The pickup truck can be used for moving furniture,
+                    boxes, household goods, office items and other
+                    suitable items that require local transportation.
+                </p>
+
+                <p>
+                    You can contact us directly by phone or WhatsApp
+                    to discuss your pickup and delivery requirements.
+                </p>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h4>
+                        Suitable Pickup Truck
+                    </h4>
+
+                    <p>
+                        A practical transportation option for
+                        smaller household, office and delivery jobs.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+
+<!-- WHAT WE PROVIDE -->
+<section class="service-section bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                What We Can Help You Transport
+            </h2>
+
+            <p class="text-muted">
+                Our 1 ton pickup service can be suitable for different
+                types of local transportation requirements.
+            </p>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fa-solid fa-couch"></i>
+                    <h4>Furniture</h4>
+                    <p>
+                        Transport suitable furniture items from one
+                        location to another.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fa-solid fa-box"></i>
+                    <h4>Boxes & Goods</h4>
+                    <p>
+                        Move boxes, packages and other suitable goods
+                        for local delivery.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i class="fa-solid fa-building"></i>
+                    <h4>Office Items</h4>
+                    <p>
+                        Suitable for transporting office furniture,
+                        equipment and other items.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUITABLE FOR -->
+<section class="service-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Who Can Use Our 1 Ton Pickup Service?
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fa-solid fa-house"></i>
+                    <h5>Home Moving</h5>
+                    <p>
+                        Transport household items between locations.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fa-solid fa-building"></i>
+                    <h5>Office Moving</h5>
+                    <p>
+                        Move suitable office furniture and equipment.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fa-solid fa-truck-fast"></i>
+                    <h5>Local Delivery</h5>
+                    <p>
+                        Deliver goods from pickup location to destination.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="feature-card text-center">
+                    <i class="fa-solid fa-boxes-stacked"></i>
+                    <h5>Goods Transport</h5>
+                    <p>
+                        Transport suitable goods around Dubai.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="service-section bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                How Our Pickup Service Works
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+
+                <div class="text-center">
+
+                    <div class="process-number mx-auto">
+                        1
+                    </div>
+
+                    <h5>Contact Us</h5>
+
+                    <p>
+                        Call or WhatsApp us with your requirement.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="text-center">
+
+                    <div class="process-number mx-auto">
+                        2
+                    </div>
+
+                    <h5>Share Locations</h5>
+
+                    <p>
+                        Tell us your pickup and delivery locations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="text-center">
+
+                    <div class="process-number mx-auto">
+                        3
+                    </div>
+
+                    <h5>Confirm Service</h5>
+
+                    <p>
+                        Discuss the delivery requirements and confirm.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-3">
+
+                <div class="text-center">
+
+                    <div class="process-number mx-auto">
+                        4
+                    </div>
+
+                    <h5>Pickup & Delivery</h5>
+
+                    <p>
+                        The pickup truck handles the agreed delivery.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AREAS -->
+<section class="service-section">
+
+    <div class="container text-center">
+
+        <h2 class="section-title">
+            Areas We Serve
+        </h2>
+
+        <p class="text-muted mb-4">
+            Pickup and delivery services are available in Dubai
+            and surrounding areas.
+        </p>
+
+        <div class="area-list">
+
+            <span>Dubai</span>
+            <span>Sharjah</span>
+            <span>Ajman</span>
+            <span>Abu Dhabi</span>
+            <span>Fujairah</span>
+            <span>Al Ain</span>
+            <span>Ras Al Khaimah</span>
+            <span>Umm Al Quwain</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHY US -->
+<section class="service-section bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Why Use Our 1 Ton Pickup Service?
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h4>Pickup Truck Service</h4>
+
+                    <p>
+                        Practical transportation for suitable
+                        pickup and delivery requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h4>Local Transportation</h4>
+
+                    <p>
+                        Suitable for transporting items between
+                        different locations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-brands fa-whatsapp"></i>
+
+                    <h4>Easy Booking</h4>
+
+                    <p>
+                        Contact us directly through phone or WhatsApp
+                        to discuss your requirement.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="service-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h5>
+                What is your 1 ton pickup service used for?
+            </h5>
+
+            <p>
+                It can be used for suitable furniture, boxes,
+                household goods, office items and local deliveries.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h5>
+                How can I book a 1 ton pickup?
+            </h5>
+
+            <p>
+                You can call us or contact us through WhatsApp
+                with your pickup and delivery details.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h5>
+                Do you provide pickup service outside Dubai?
+            </h5>
+
+            <p>
+                Service availability depends on the pickup and
+                delivery locations. Contact us with your locations
+                for confirmation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+
+    <div class="container text-center">
+
+        <h2 class="mb-3">
+            Need a 1 Ton Pickup Truck in Dubai?
+        </h2>
+
+        <p class="mb-4">
+            Contact us today with your pickup and delivery details.
+        </p>
+
+        <a href="tel:+971588462189"
+           class="btn btn-light btn-lg me-2">
+            <i class="fa-solid fa-phone"></i>
+            Call Now
+        </a>
+
+        <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%201%20ton%20pickup%20truck%20service%20in%20Dubai."
+           target="_blank"
+           class="btn btn-success btn-lg">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

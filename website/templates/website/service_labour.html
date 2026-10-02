@@ -1,0 +1,712 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}
+Loading & Unloading Labour in Dubai | Pickup Truck Services
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-hero {
+        padding: 150px 0 90px;
+        background: linear-gradient(135deg, #f8f9fa, #eef5ff);
+    }
+
+    .service-hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .service-hero p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .service-image {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .service-section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        height: 100%;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card i {
+        font-size: 35px;
+        color: #0d6efd;
+        margin-bottom: 20px;
+    }
+
+    .process-number {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #0d6efd;
+        color: white;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .area-list span {
+        display: inline-block;
+        padding: 10px 18px;
+        margin: 6px;
+        background: #f1f5f9;
+        border-radius: 30px;
+    }
+
+    .faq-item {
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .faq-item h5 {
+        font-weight: 600;
+    }
+
+    .cta-section {
+        padding: 70px 0;
+        background: #0d6efd;
+        color: white;
+    }
+
+    @media(max-width:768px) {
+
+        .service-hero {
+            padding: 120px 0 60px;
+        }
+
+        .service-hero h1 {
+            font-size: 34px;
+        }
+
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<section class="service-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-primary mb-3">
+                    Loading & Unloading Labour
+                </span>
+
+                <h1>
+                    Loading & Unloading Labour Services in Dubai
+                </h1>
+
+                <p class="mt-3">
+                    Loading and unloading labour service in Dubai
+                    for moving furniture, boxes, household goods,
+                    office items and other suitable goods.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="tel:+971588462189"
+                       class="btn btn-primary btn-lg me-2">
+
+                        <i class="fa-solid fa-phone"></i>
+                        Call Now
+
+                    </a>
+
+                    <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20loading%20and%20unloading%20labour%20in%20Dubai."
+                       target="_blank"
+                       class="btn btn-success btn-lg">
+
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <img src="{% static 'website/images/1ton.png' %}"
+                     alt="Loading and Unloading Labour Service Dubai"
+                     class="service-image">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="service-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+
+                <h2 class="section-title">
+                    Loading & Unloading Labour in Dubai
+                </h2>
+
+                <p>
+                    Moving heavy or multiple items can require
+                    additional help during loading and unloading.
+                </p>
+
+                <p>
+                    Our loading and unloading labour service is
+                    designed for customers who need assistance with
+                    handling suitable goods during pickup or delivery.
+                </p>
+
+                <p>
+                    You can contact us with your requirements and
+                    discuss the type of items, locations and labour
+                    assistance needed.
+                </p>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-people-carry-box"></i>
+
+                    <h4>
+                        Labour Assistance
+                    </h4>
+
+                    <p>
+                        Get additional assistance for suitable
+                        loading and unloading requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="service-section bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Loading & Unloading Services
+            </h2>
+
+            <p class="text-muted">
+                Labour assistance can be useful for different
+                transportation and moving requirements.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-couch"></i>
+
+                    <h4>
+                        Furniture Handling
+                    </h4>
+
+                    <p>
+                        Assistance with handling suitable furniture
+                        during loading and unloading.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-boxes-stacked"></i>
+
+                    <h4>
+                        Box Loading
+                    </h4>
+
+                    <p>
+                        Assistance with loading and unloading boxes
+                        and suitable goods.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <h4>
+                        Home Moving
+                    </h4>
+
+                    <p>
+                        Labour assistance for suitable household
+                        moving requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h4>
+                        Office Moving
+                    </h4>
+
+                    <p>
+                        Assistance with suitable office furniture
+                        and equipment.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-truck-loading"></i>
+
+                    <h4>
+                        Truck Loading
+                    </h4>
+
+                    <p>
+                        Assistance with loading suitable goods
+                        onto the pickup truck.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-4">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h4>
+                        Truck Unloading
+                    </h4>
+
+                    <p>
+                        Assistance with unloading suitable goods
+                        from the pickup truck.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- WHO NEEDS -->
+<section class="service-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Who Can Use Our Labour Service?
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-3">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <h5>
+                        Homeowners
+                    </h5>
+
+                    <p>
+                        For suitable household moving requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h5>
+                        Offices
+                    </h5>
+
+                    <p>
+                        For suitable office moving requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-store"></i>
+
+                    <h5>
+                        Businesses
+                    </h5>
+
+                    <p>
+                        For handling suitable business goods.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-md-3">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h5>
+                        Deliveries
+                    </h5>
+
+                    <p>
+                        For loading and unloading during deliveries.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="service-section bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                How It Works
+            </h2>
+
+        </div>
+
+
+        <div class="row g-4">
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    1
+                </div>
+
+                <h5>
+                    Contact Us
+                </h5>
+
+                <p>
+                    Call or WhatsApp us with your requirements.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    2
+                </div>
+
+                <h5>
+                    Share Details
+                </h5>
+
+                <p>
+                    Tell us what needs to be loaded or unloaded.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    3
+                </div>
+
+                <h5>
+                    Confirm
+                </h5>
+
+                <p>
+                    Discuss the requirement and confirm the service.
+                </p>
+
+            </div>
+
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    4
+                </div>
+
+                <h5>
+                    Labour Assistance
+                </h5>
+
+                <p>
+                    Labour assistance is provided for the agreed work.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AREAS -->
+<section class="service-section">
+
+    <div class="container text-center">
+
+        <h2 class="section-title">
+            Areas We Serve
+        </h2>
+
+        <p class="text-muted">
+            Contact us to confirm service availability for your
+            location.
+        </p>
+
+        <div class="area-list mt-4">
+
+            <span>Dubai</span>
+            <span>Sharjah</span>
+            <span>Ajman</span>
+            <span>Abu Dhabi</span>
+            <span>Fujairah</span>
+            <span>Al Ain</span>
+            <span>Ras Al Khaimah</span>
+            <span>Umm Al Quwain</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="service-section bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h5>
+                What does the loading and unloading service include?
+            </h5>
+
+            <p>
+                The service provides labour assistance for suitable
+                loading and unloading requirements.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h5>
+                Can I request labour with a pickup truck?
+            </h5>
+
+            <p>
+                You can contact us and discuss your pickup truck
+                and labour requirements.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h5>
+                Do you provide labour for home moving?
+            </h5>
+
+            <p>
+                Labour assistance can be discussed for suitable
+                household moving requirements.
+            </p>
+
+        </div>
+
+
+        <div class="faq-item">
+
+            <h5>
+                How can I contact you?
+            </h5>
+
+            <p>
+                You can call us directly or send your requirements
+                through WhatsApp.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+
+    <div class="container text-center">
+
+        <h2>
+            Need Loading & Unloading Labour in Dubai?
+        </h2>
+
+        <p class="mt-3 mb-4">
+            Contact us and tell us about your loading or unloading
+            requirement.
+        </p>
+
+        <a href="tel:+971588462189"
+           class="btn btn-light btn-lg me-2">
+
+            <i class="fa-solid fa-phone"></i>
+            Call Now
+
+        </a>
+
+        <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20loading%20and%20unloading%20labour%20in%20Dubai."
+           target="_blank"
+           class="btn btn-success btn-lg">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}

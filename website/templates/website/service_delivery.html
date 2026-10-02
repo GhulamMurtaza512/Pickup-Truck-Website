@@ -1,0 +1,553 @@
+{% extends "website/base.html" %}
+{% load static %}
+
+{% block title %}
+Pickup Truck Delivery Services in Dubai | Goods Delivery
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .service-hero {
+        padding: 150px 0 90px;
+        background: linear-gradient(135deg, #f8f9fa, #eef5ff);
+    }
+
+    .service-hero h1 {
+        font-size: 48px;
+        font-weight: 700;
+    }
+
+    .service-hero p {
+        font-size: 18px;
+        line-height: 1.8;
+        color: #555;
+    }
+
+    .service-image {
+        width: 100%;
+        max-height: 420px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .service-section {
+        padding: 80px 0;
+    }
+
+    .section-title {
+        font-weight: 700;
+        margin-bottom: 20px;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 30px;
+        border-radius: 15px;
+        height: 100%;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+    .feature-card i {
+        font-size: 35px;
+        color: #0d6efd;
+        margin-bottom: 20px;
+    }
+
+    .area-list span {
+        display: inline-block;
+        padding: 10px 18px;
+        margin: 6px;
+        background: #f1f5f9;
+        border-radius: 30px;
+    }
+
+    .process-number {
+        width: 55px;
+        height: 55px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background: #0d6efd;
+        color: white;
+        font-size: 22px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+
+    .faq-item {
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .faq-item h5 {
+        font-weight: 600;
+    }
+
+    .cta-section {
+        padding: 70px 0;
+        background: #0d6efd;
+        color: white;
+    }
+
+    @media(max-width:768px) {
+        .service-hero {
+            padding: 120px 0 60px;
+        }
+
+        .service-hero h1 {
+            font-size: 34px;
+        }
+    }
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<section class="service-hero">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-6">
+
+                <span class="badge bg-primary mb-3">
+                    Pickup Truck Delivery
+                </span>
+
+                <h1>
+                    Pickup Truck Delivery Services in Dubai
+                </h1>
+
+                <p class="mt-3">
+                    Pickup truck delivery service in Dubai for
+                    furniture, boxes, household goods, office items
+                    and suitable local deliveries.
+                </p>
+
+                <div class="mt-4">
+
+                    <a href="tel:+971588462189"
+                       class="btn btn-primary btn-lg me-2">
+                        <i class="fa-solid fa-phone"></i>
+                        Call Now
+                    </a>
+
+                    <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20pickup%20truck%20delivery%20service%20in%20Dubai."
+                       target="_blank"
+                       class="btn btn-success btn-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        WhatsApp
+                    </a>
+
+                </div>
+
+            </div>
+
+            <div class="col-lg-6">
+
+                <img src="{% static 'website/images/1ton.png' %}"
+                     alt="Pickup Truck Delivery Service Dubai"
+                     class="service-image">
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ABOUT -->
+<section class="service-section">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <div class="col-lg-7">
+
+                <h2 class="section-title">
+                    Pickup Truck Delivery in Dubai
+                </h2>
+
+                <p>
+                    Our pickup truck delivery service helps customers
+                    transport suitable items from one location to
+                    another.
+                </p>
+
+                <p>
+                    Whether you need to move furniture, boxes,
+                    household items, office goods or other suitable
+                    products, you can contact us with your pickup
+                    and destination details.
+                </p>
+
+                <p>
+                    We provide a simple way to arrange pickup and
+                    delivery through direct phone or WhatsApp
+                    communication.
+                </p>
+
+            </div>
+
+            <div class="col-lg-5">
+
+                <div class="feature-card text-center">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h4>
+                        Local Delivery Service
+                    </h4>
+
+                    <p>
+                        Tell us your pickup location, destination
+                        and item details to discuss your delivery.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SERVICES -->
+<section class="service-section bg-light">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Our Delivery Services
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-couch"></i>
+
+                    <h4>Furniture Delivery</h4>
+
+                    <p>
+                        Transport suitable furniture between
+                        pickup and delivery locations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-boxes-stacked"></i>
+
+                    <h4>Goods Delivery</h4>
+
+                    <p>
+                        Move boxes and suitable goods for local
+                        transportation requirements.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <h4>Household Delivery</h4>
+
+                    <p>
+                        Transport suitable household items between
+                        locations.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <h4>Office Delivery</h4>
+
+                    <p>
+                        Suitable for moving office items and
+                        equipment.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h4>Pickup & Drop</h4>
+
+                    <p>
+                        Share your pickup and destination locations
+                        with us.
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="col-md-4">
+
+                <div class="feature-card">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <h4>Local Transportation</h4>
+
+                    <p>
+                        Suitable transportation between locations
+                        in Dubai and nearby areas.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- HOW IT WORKS -->
+<section class="service-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                How Pickup Delivery Works
+            </h2>
+
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    1
+                </div>
+
+                <h5>Contact Us</h5>
+
+                <p>
+                    Call or WhatsApp us.
+                </p>
+
+            </div>
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    2
+                </div>
+
+                <h5>Share Details</h5>
+
+                <p>
+                    Provide pickup, destination and item details.
+                </p>
+
+            </div>
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    3
+                </div>
+
+                <h5>Confirm</h5>
+
+                <p>
+                    Discuss the requirement and confirm the service.
+                </p>
+
+            </div>
+
+            <div class="col-md-3 text-center">
+
+                <div class="process-number mx-auto">
+                    4
+                </div>
+
+                <h5>Delivery</h5>
+
+                <p>
+                    Pickup and delivery are carried out as agreed.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- AREAS -->
+<section class="service-section bg-light">
+
+    <div class="container text-center">
+
+        <h2 class="section-title">
+            Delivery Areas
+        </h2>
+
+        <p>
+            Contact us to confirm availability for your pickup
+            and destination.
+        </p>
+
+        <div class="area-list mt-4">
+
+            <span>Dubai</span>
+            <span>Sharjah</span>
+            <span>Ajman</span>
+            <span>Abu Dhabi</span>
+            <span>Fujairah</span>
+            <span>Al Ain</span>
+            <span>Ras Al Khaimah</span>
+            <span>Umm Al Quwain</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FAQ -->
+<section class="service-section">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Frequently Asked Questions
+            </h2>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h5>
+                What items can I send with the pickup truck?
+            </h5>
+
+            <p>
+                Suitable furniture, boxes, household goods,
+                office items and other suitable goods can be
+                transported.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h5>
+                How do I request a delivery?
+            </h5>
+
+            <p>
+                Contact us by phone or WhatsApp and provide your
+                pickup location, delivery location and item details.
+            </p>
+
+        </div>
+
+        <div class="faq-item">
+
+            <h5>
+                Can you deliver outside Dubai?
+            </h5>
+
+            <p>
+                Availability depends on the requested route.
+                Contact us with your locations for confirmation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+<section class="cta-section">
+
+    <div class="container text-center">
+
+        <h2>
+            Need Pickup Truck Delivery in Dubai?
+        </h2>
+
+        <p class="mt-3 mb-4">
+            Contact us with your pickup and delivery requirements.
+        </p>
+
+        <a href="tel:+971588462189"
+           class="btn btn-light btn-lg me-2">
+            <i class="fa-solid fa-phone"></i>
+            Call Now
+        </a>
+
+        <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20pickup%20truck%20delivery%20service%20in%20Dubai."
+           target="_blank"
+           class="btn btn-success btn-lg">
+            <i class="fa-brands fa-whatsapp"></i>
+            WhatsApp
+        </a>
+
+    </div>
+
+</section>
+
+{% endblock %}
