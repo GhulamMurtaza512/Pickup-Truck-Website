@@ -1,0 +1,942 @@
+{% extends 'website/base.html' %}
+{% load static %}
+
+{% block title %}
+Our Services | Pickup Truck & Delivery Services Dubai
+{% endblock %}
+
+
+{% block content %}
+
+<!-- =====================================================
+     SERVICES HERO
+===================================================== -->
+
+<section class="services-hero">
+
+    <div class="services-hero-overlay"></div>
+
+    <div class="container">
+
+        <div class="services-hero-content">
+
+            <h1>
+                Our Services
+            </h1>
+
+            <p>
+                Fast, reliable and professional pickup truck,
+                delivery, shifting and labour services across
+                Dubai and the UAE.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICES
+===================================================== -->
+
+<section class="services-page py-5">
+
+    <div class="container">
+
+        <!-- Heading -->
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                Pickup Truck & Delivery Services
+            </h2>
+
+            <p class="section-description">
+                We provide reliable transportation, shifting,
+                delivery and labour services for homes,
+                offices and businesses.
+            </p>
+
+        </div>
+
+
+        <!-- =================================================
+             SERVICE CARDS
+        ================================================== -->
+
+        <div class="row g-4">
+
+
+            <!-- Service 1 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card service-clickable"
+                     data-service="Fast & Reliable Service">
+
+                    <img
+                        src="{% static 'website/images/fast_relaible.png' %}"
+                        alt="Fast and Reliable Pickup Truck Service"
+                    >
+
+                    <div class="service-card-content">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+
+                        <h3>
+                            Fast & Reliable Service
+                        </h3>
+
+                        <p>
+                            Fast response for
+                            <strong>
+                                Delivery, Shifting & Transportation
+                            </strong>
+                            needs, ensuring your goods are handled
+                            safely and delivered on time.
+                        </p>
+
+                        <span class="service-link">
+                            Contact Us
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 2 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card service-clickable"
+                     data-service="1 Ton Pickup">
+
+                    <img
+                        src="{% static 'website/images/1ton.png' %}"
+                        alt="1 Ton Pickup Truck Service"
+                    >
+
+                    <div class="service-card-content">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-truck"></i>
+                        </div>
+
+                        <h3>
+                            1 Ton Pickup
+                        </h3>
+
+                        <p>
+                            Suitable for
+                            <strong>
+                                Home & Office Shifting,
+                                Deliveries, Furniture,
+                                Boxes & Goods Transportation.
+                            </strong>
+                        </p>
+
+                        <span class="service-link">
+                            Contact Us
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Service 3 -->
+
+            <div class="col-lg-4 col-md-6">
+
+                <div class="service-card service-clickable"
+                     data-service="Loading & Unloading Labour">
+
+                    <img
+                        src="{% static 'website/images/loading&unloading.png' %}"
+                        alt="Loading and Unloading Labour Service"
+                    >
+
+                    <div class="service-card-content">
+
+                        <div class="service-icon">
+                            <i class="fa-solid fa-people-carry-box"></i>
+                        </div>
+
+                        <h3>
+                            Loading & Unloading Labour
+                        </h3>
+
+                        <p>
+                            Reliable labour available for
+                            <strong>
+                                Loading, Unloading & Shifting Assistance
+                            </strong>
+                            to help move your goods safely.
+                        </p>
+
+                        <span class="service-link">
+                            Contact Us
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     ADDITIONAL SERVICES
+===================================================== -->
+
+<section class="additional-services py-5">
+
+    <div class="container">
+
+        <div class="text-center mb-5">
+
+            <h2 class="section-title">
+                What We Can Help With
+            </h2>
+
+            <p class="section-description">
+                Our services are suitable for personal,
+                residential and business transportation needs.
+            </p>
+
+        </div>
+
+
+        <div class="row g-4">
+
+
+            <!-- Home Shifting -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="service-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+
+                    <h4>
+                        Home Shifting
+                    </h4>
+
+                    <p>
+                        Pickup truck and labour assistance
+                        for moving household goods and furniture.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Office Shifting -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="service-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-building"></i>
+                    </div>
+
+                    <h4>
+                        Office Shifting
+                    </h4>
+
+                    <p>
+                        Move office furniture, equipment,
+                        boxes and other business items.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Furniture Delivery -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="service-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-couch"></i>
+                    </div>
+
+                    <h4>
+                        Furniture Delivery
+                    </h4>
+
+                    <p>
+                        Transport furniture and other suitable
+                        goods safely to your destination.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Goods Transportation -->
+
+            <div class="col-md-6 col-lg-3">
+
+                <div class="service-feature">
+
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-box"></i>
+                    </div>
+
+                    <h4>
+                        Goods Transportation
+                    </h4>
+
+                    <p>
+                        Reliable transportation for boxes,
+                        household goods and office items.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICE AREAS
+===================================================== -->
+
+<section class="service-areas py-5">
+
+    <div class="container text-center">
+
+        <h2 class="section-title">
+            Areas We Serve
+        </h2>
+
+        <p class="section-description mb-4">
+            Pickup truck, delivery, shifting and labour
+            services available across major areas of the UAE.
+        </p>
+
+
+        <div class="areas-list">
+
+            <span>Dubai</span>
+            <span>Sharjah</span>
+            <span>Ajman</span>
+            <span>Abu Dhabi</span>
+            <span>Fujairah</span>
+            <span>Al Ain</span>
+            <span>Ras Al Khaimah</span>
+            <span>Umm Al Quwain</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     CTA
+===================================================== -->
+
+<section class="services-cta py-5">
+
+    <div class="container text-center">
+
+        <h2>
+            Need a Pickup Truck or Labour?
+        </h2>
+
+        <p>
+            Contact us today and tell us what you need.
+            We'll help you with the right service.
+        </p>
+
+
+        <div class="mt-4">
+
+            <a href="tel:+971588462189"
+               class="btn btn-light btn-lg me-2">
+
+                <i class="fa-solid fa-phone"></i>
+                Call Now
+
+            </a>
+
+
+            <a href="https://wa.me/971588462189?text=Hello%2C%20I%20need%20your%20pickup%20truck%20or%20delivery%20service."
+               class="btn btn-success btn-lg"
+               target="_blank">
+
+                <i class="fa-brands fa-whatsapp"></i>
+                WhatsApp
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     SERVICE CONTACT MODAL
+===================================================== -->
+
+<div class="modal fade"
+     id="serviceContactModal"
+     tabindex="-1"
+     aria-labelledby="serviceContactModalLabel"
+     aria-hidden="true">
+
+    <div class="modal-dialog modal-dialog-centered modal-sm">
+
+        <div class="modal-content service-contact-modal">
+
+            <div class="modal-header">
+
+                <h5 class="modal-title"
+                    id="serviceContactModalLabel">
+
+                    Contact Us
+
+                </h5>
+
+                <button type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal">
+                </button>
+
+            </div>
+
+
+            <div class="modal-body text-center">
+
+                <div class="service-contact-icon">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                </div>
+
+
+                <h5 id="selectedService">
+                    Pickup Truck Service
+                </h5>
+
+
+                <p>
+                    How would you like to contact us?
+                </p>
+
+
+                <div class="d-grid gap-2">
+
+
+                    <!-- Call -->
+
+                    <a href="tel:+971588462189"
+                       class="btn btn-primary">
+
+                        <i class="fa-solid fa-phone me-2"></i>
+                        Call Now
+
+                    </a>
+
+
+                    <!-- WhatsApp -->
+
+                    <a id="serviceWhatsapp"
+                       href="#"
+                       class="btn btn-success"
+                       target="_blank">
+
+                        <i class="fa-brands fa-whatsapp me-2"></i>
+                        WhatsApp
+
+                    </a>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+{% endblock %}
+
+
+<!-- =====================================================
+     CSS
+===================================================== -->
+
+{% block extra_css %}
+
+<style>
+
+/* =========================================
+   SERVICES HERO
+========================================= */
+
+.services-hero {
+    position: relative;
+    min-height: 360px;
+
+    background:
+        url("{% static 'website/images/1ton.png' %}")
+        center center / cover no-repeat;
+
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+
+.services-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.58);
+}
+
+
+.services-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+
+.services-hero h1 {
+    font-size: 52px;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+
+.services-hero p {
+    font-size: 18px;
+    line-height: 1.7;
+    margin: 0;
+}
+
+
+/* =========================================
+   GENERAL
+========================================= */
+
+.section-title {
+    font-size: 34px;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+
+.section-description {
+    max-width: 700px;
+    margin: 10px auto 0;
+    color: #777;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   SERVICE CARDS
+========================================= */
+
+.services-page {
+    background: #f7f9fc;
+}
+
+
+.service-card {
+    height: 100%;
+    background: white;
+    border-radius: 14px;
+    overflow: hidden;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+
+    transition: all 0.3s ease;
+}
+
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+
+.service-clickable {
+    cursor: pointer;
+}
+
+
+.service-card > img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+
+.service-card-content {
+    padding: 25px;
+}
+
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf2ff;
+    color: #0d6efd;
+
+    font-size: 21px;
+
+    margin-bottom: 15px;
+}
+
+
+.service-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 12px;
+}
+
+
+.service-card p {
+    color: #777;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+
+.service-link {
+    color: #0d6efd;
+    font-weight: 600;
+}
+
+
+.service-link i {
+    margin-left: 5px;
+    transition: margin-left 0.2s ease;
+}
+
+
+.service-card:hover .service-link i {
+    margin-left: 10px;
+}
+
+
+/* =========================================
+   ADDITIONAL SERVICES
+========================================= */
+
+.additional-services {
+    background: white;
+}
+
+
+.service-feature {
+    height: 100%;
+    padding: 30px 22px;
+    text-align: center;
+
+    border: 1px solid #eee;
+    border-radius: 12px;
+
+    transition: all 0.3s ease;
+}
+
+
+.service-feature:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+
+.feature-icon {
+    width: 55px;
+    height: 55px;
+
+    margin: 0 auto 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf2ff;
+    color: #0d6efd;
+
+    font-size: 22px;
+}
+
+
+.service-feature h4 {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+.service-feature p {
+    color: #777;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0;
+}
+
+
+/* =========================================
+   SERVICE AREAS
+========================================= */
+
+.service-areas {
+    background: #f7f9fc;
+}
+
+
+.areas-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+
+.areas-list span {
+    background: #0d6efd;
+    color: white;
+
+    padding: 10px 18px;
+
+    border-radius: 25px;
+
+    font-size: 14px;
+    font-weight: 600;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.services-cta {
+    background: #0d6efd;
+    color: white;
+}
+
+
+.services-cta h2 {
+    font-size: 34px;
+    font-weight: 700;
+}
+
+
+.services-cta p {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.service-contact-modal {
+    border: none;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+
+.service-contact-modal .modal-header {
+    border-bottom: 1px solid #eee;
+}
+
+
+.service-contact-modal .modal-body {
+    padding: 25px 22px 30px;
+}
+
+
+.service-contact-icon {
+    width: 60px;
+    height: 60px;
+
+    margin: 0 auto 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf2ff;
+    color: #0d6efd;
+
+    font-size: 25px;
+}
+
+
+.service-contact-modal h5 {
+    font-weight: 700;
+}
+
+
+.service-contact-modal p {
+    color: #777;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+    .services-hero {
+        min-height: 300px;
+    }
+
+
+    .services-hero h1 {
+        font-size: 36px;
+    }
+
+
+    .services-hero p {
+        font-size: 15px;
+    }
+
+
+    .section-title {
+        font-size: 28px;
+    }
+
+
+    .service-card > img {
+        height: 220px;
+    }
+
+}
+
+</style>
+
+{% endblock %}
+
+
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
+{% block extra_js %}
+
+<script>
+
+document.addEventListener('DOMContentLoaded', function () {
+
+    const serviceCards =
+        document.querySelectorAll('.service-clickable');
+
+    const selectedService =
+        document.getElementById('selectedService');
+
+    const whatsappButton =
+        document.getElementById('serviceWhatsapp');
+
+    const modalElement =
+        document.getElementById('serviceContactModal');
+
+
+    if (!modalElement) {
+        return;
+    }
+
+
+    const serviceModal =
+        new bootstrap.Modal(modalElement);
+
+
+    serviceCards.forEach(function (card) {
+
+        card.addEventListener('click', function () {
+
+            const serviceName =
+                card.getAttribute('data-service');
+
+
+            selectedService.textContent =
+                serviceName;
+
+
+            const message =
+                `Hello, I need your ${serviceName} service in Dubai.`;
+
+
+            const whatsappUrl =
+                'https://wa.me/971588462189?text=' +
+                encodeURIComponent(message);
+
+
+            whatsappButton.href =
+                whatsappUrl;
+
+
+            serviceModal.show();
+
+        });
+
+    });
+
+});
+
+</script>
+
+{% endblock %}

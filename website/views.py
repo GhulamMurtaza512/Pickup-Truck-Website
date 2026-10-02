@@ -52,6 +52,10 @@ def contact(request):
     )
 
 
+
+def services(request):
+    return render(request, 'website/services.html')
+    
 # =====================================================
 # LOGIN
 # =====================================================

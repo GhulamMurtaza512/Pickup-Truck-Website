@@ -60,46 +60,46 @@
 
                 <ul class="navbar-nav ms-auto">
 
-                    <!-- Home -->
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="/">
-                            Home
-                        </a>
-
-                    </li>
-
-
-                    <!-- Services -->
-                    <li class="nav-item">
-
-                        <a class="nav-link" href="/#services">
-                            Services
-                        </a>
-
-                    </li>
+    <!-- Home -->
+    <li class="nav-item">
+        <a
+            class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
+            href="/">
+            Home
+        </a>
+    </li>
 
 
-                    <!-- About -->
-                    <li class="nav-item">
+    <!-- Services -->
+    <li class="nav-item">
+        <a
+    class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif %}"
+    href="/services/">
+    Services
+</a>
+    </li>
 
-                        <a class="nav-link" href="/about/">
-                            About Us
-                        </a>
 
-                    </li>
+    <!-- About -->
+    <li class="nav-item">
+        <a
+            class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}"
+            href="/about/">
+            About Us
+        </a>
+    </li>
 
 
-                    <!-- Contact -->
-                    <li class="nav-item">
+    <!-- Contact -->
+    <li class="nav-item">
+        <a
+            class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}"
+            href="/contact/">
+            Contact
+        </a>
+    </li>
 
-                        <a class="nav-link" href="/contact/">
-                            Contact
-                        </a>
-
-                    </li>
-
-                </ul>
+</ul>
 
 
                 <!-- Call Now -->

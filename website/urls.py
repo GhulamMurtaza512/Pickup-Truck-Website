@@ -20,7 +20,7 @@ urlpatterns = [
         views.contact,
         name='contact'
     ),
-
+    path('services/', views.services, name='services'),
     path(
         'login/',
         views.login_view,
